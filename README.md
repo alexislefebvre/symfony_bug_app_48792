@@ -14,7 +14,7 @@ rm -rfv var/cache/* ; php bin/phpunit
 
 If we delete `src/Controller/DefaultController.php` or `@required` in `AbstractController` then it works again (as noted by the author of the original issue).
 
-It looks like `AnnotationReader::addGlobalIgnoredName('required')` is not called, so `@ignored` is not ignored, and it crashes.
+It looks like `AnnotationReader::addGlobalIgnoredName('required')` is not called, so `@required` is not ignored, and it crashes.
 
 ## Output
 
